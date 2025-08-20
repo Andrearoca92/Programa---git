@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sistema de Recomendación de Productos</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        h1 { text-align: center; color: #0056b3; margin-bottom: 30px; }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label { display: block; margin-bottom: 10px; font-weight: bold; color: #555; }
+        input[type="text"], select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encuentra tu Producto Ideal</h1>
+    <form action="recomendar" method="post">
+        <label for="tipoCabello">Tipo de Cabello:</label>
+        <input type="text" id="tipoCabello" name="tipoCabello" placeholder="Ej: Graso, Seco, Normal" required><br>
+        <label for="tipoPiel">Tipo de Piel:</label>
+        <input type="text" id="tipoPiel" name="tipoPiel" placeholder="Ej: Sensible, Mixta, Grasa" required><br>
+        <label for="categoria">Categoría de Producto:</label>
+        <input type="text" id="categoria" name="categoria" placeholder="Ej: Cuidado Facial, Cuidado Capilar" required><br>
+        <label for="marca">Marca Preferida:</label>
+        <input type="text" id="marca" name="marca" placeholder="Ej: L'Oreal, Nivea, Dove (opcional)"><br>
+        <input type="submit" value="Obtener Recomendación">
+    </form>
+</body>
+</html>
